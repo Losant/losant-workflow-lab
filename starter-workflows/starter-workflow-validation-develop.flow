@@ -1,0 +1,116 @@
+{
+  "_exportDate": "2019-07-09T20:04:52.798Z",
+  "_type": "flow",
+  "applicationId": "5c40ecbac853d20008cd96ba",
+  "customNodeVersions": [
+  ],
+  "customNodes": [
+  ],
+  "description": "",
+  "enabled": true,
+  "flowClass": "cloud",
+  "globals": [
+  ],
+  "id": "5d24ee2c22be2b0009a8e2a0",
+  "name": "Starter Workflow: Validation",
+  "nodes": [
+    {
+      "config": {
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "7.1",
+            "dontBreak": false
+          }
+        ],
+        "switchTemplate": "{{ data.query.q }}"
+      },
+      "id": "YWcpkOaX1Q",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gZuPKpPt0k",
+        "label": "Validation",
+        "name": "switch",
+        "x": 780,
+        "y": 240
+      },
+      "outputIds": [
+        [
+        ],
+        [
+          "KCYQH0k1PZ"
+        ]
+      ],
+      "type": "SwitchNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "M79qT2WP00",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 720,
+        "y": 700
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "KCYQH0k1PZ",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "tvktYfBZRp",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 720,
+        "y": 600
+      },
+      "outputIds": [
+        [
+          "M79qT2WP00"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    }
+  ],
+  "triggers": [
+    {
+      "config": {
+      },
+      "key": "5cddb5644c33040007a68ea6",
+      "meta": {
+        "category": "trigger",
+        "description": "",
+        "id": "V~j7MvcjUN",
+        "label": "Array",
+        "name": "webhook",
+        "uiId": "jLOafUgTGo",
+        "x": 780,
+        "y": 80
+      },
+      "outputIds": [
+        [
+          "YWcpkOaX1Q"
+        ]
+      ],
+      "type": "webhook"
+    }
+  ]
+}

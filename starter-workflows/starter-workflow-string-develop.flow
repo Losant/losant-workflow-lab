@@ -1,0 +1,328 @@
+{
+  "_exportDate": "2019-07-09T20:04:45.144Z",
+  "_type": "flow",
+  "applicationId": "5c40ecbac853d20008cd96ba",
+  "customNodeVersions": [
+  ],
+  "customNodes": [
+  ],
+  "description": "",
+  "enabled": true,
+  "flowClass": "cloud",
+  "globals": [
+  ],
+  "id": "5d24ecd8bb63290008c0f470",
+  "name": "Starter Workflow: String",
+  "nodes": [
+    {
+      "config": {
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "3.1",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "3.2",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "3.3",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "3.4",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "3.5",
+            "dontBreak": false
+          }
+        ],
+        "switchTemplate": "{{ data.query.q }}"
+      },
+      "id": "QJGcrfb2MJ",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gZuPKpPt0k",
+        "label": "Switch",
+        "name": "switch",
+        "x": 1660,
+        "y": 180
+      },
+      "outputIds": [
+        [
+        ],
+        [
+          "9anYEhxQjX"
+        ],
+        [
+          "pAEbQ8srIs"
+        ],
+        [
+          "vj4Cb-65YI"
+        ],
+        [
+          "3uvy5olE6z"
+        ],
+        [
+          "nvIOiiZmPG"
+        ]
+      ],
+      "type": "SwitchNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "x9F7VIbd1T",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1840,
+        "y": 800
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "OpzycICM9I",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1720,
+        "y": 600
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "xj5Q9b4Nxb",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1600,
+        "y": 800
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "FXo4LeEmuL",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1480,
+        "y": 600
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "dd7zNBbOfl",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1340,
+        "y": 820
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "pAEbQ8srIs",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "kur9-wQ5Tr",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1480,
+        "y": 520
+      },
+      "outputIds": [
+        [
+          "FXo4LeEmuL"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "9anYEhxQjX",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "tvktYfBZRp",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1340,
+        "y": 720
+      },
+      "outputIds": [
+        [
+          "dd7zNBbOfl"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "vj4Cb-65YI",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "_0oFMM-7MU",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1600,
+        "y": 700
+      },
+      "outputIds": [
+        [
+          "xj5Q9b4Nxb"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "3uvy5olE6z",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "zkUxVxIW8e",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1720,
+        "y": 500
+      },
+      "outputIds": [
+        [
+          "OpzycICM9I"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "nvIOiiZmPG",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "gz7Ipy3clw",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1840,
+        "y": 700
+      },
+      "outputIds": [
+        [
+          "x9F7VIbd1T"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    }
+  ],
+  "triggers": [
+    {
+      "config": {
+      },
+      "key": "5cddb5644c33040007a68ea6",
+      "meta": {
+        "category": "trigger",
+        "description": "",
+        "id": "V~j7MvcjUN",
+        "label": "Webhook",
+        "name": "webhook",
+        "uiId": "AmA2JcdMkW",
+        "x": 1660,
+        "y": 20
+      },
+      "outputIds": [
+        [
+          "QJGcrfb2MJ"
+        ]
+      ],
+      "type": "webhook"
+    }
+  ]
+}

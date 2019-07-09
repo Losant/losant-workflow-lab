@@ -1,0 +1,169 @@
+{
+  "_exportDate": "2019-07-09T20:05:01.222Z",
+  "_type": "flow",
+  "applicationId": "5c40ecbac853d20008cd96ba",
+  "customNodeVersions": [
+  ],
+  "customNodes": [
+  ],
+  "description": "",
+  "enabled": true,
+  "flowClass": "cloud",
+  "globals": [
+  ],
+  "id": "5d24eddc022e19000b80a069",
+  "name": "Starter Workflow: Workflow Storage",
+  "nodes": [
+    {
+      "config": {
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "4.1",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "4.2",
+            "dontBreak": false
+          }
+        ],
+        "switchTemplate": "{{ data.query.q }}"
+      },
+      "id": "b9ufkXuveA",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gZuPKpPt0k",
+        "label": "Switch",
+        "name": "switch",
+        "x": 780,
+        "y": 240
+      },
+      "outputIds": [
+        [
+        ],
+        [
+          "dvQbcP-Alh"
+        ],
+        [
+          "2ftEfTtHsp"
+        ]
+      ],
+      "type": "SwitchNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "jjFCWu0K_i",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 800,
+        "y": 640
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "MVlmQpI-xL",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 660,
+        "y": 860
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "2ftEfTtHsp",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "kur9-wQ5Tr",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 800,
+        "y": 560
+      },
+      "outputIds": [
+        [
+          "jjFCWu0K_i"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "dvQbcP-Alh",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "tvktYfBZRp",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 660,
+        "y": 760
+      },
+      "outputIds": [
+        [
+          "MVlmQpI-xL"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    }
+  ],
+  "triggers": [
+    {
+      "config": {
+      },
+      "key": "5cddb5644c33040007a68ea6",
+      "meta": {
+        "category": "trigger",
+        "description": "",
+        "id": "V~j7MvcjUN",
+        "label": "Workflow Storage",
+        "name": "webhook",
+        "uiId": "XfDuTsrl4u",
+        "x": 780,
+        "y": 80
+      },
+      "outputIds": [
+        [
+          "b9ufkXuveA"
+        ]
+      ],
+      "type": "webhook"
+    }
+  ]
+}
