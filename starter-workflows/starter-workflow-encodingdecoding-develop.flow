@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-07-09T20:04:32.515Z",
+  "_exportDate": "2019-07-18T17:40:09.133Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -16,76 +16,6 @@
   "nodes": [
     {
       "config": {
-        "cases": [
-          {
-            "caseLabel": "",
-            "caseTemplate": "6.1",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "6.2",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "6.3",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "6.4",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "6.5",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "6.6",
-            "dontBreak": false
-          }
-        ],
-        "switchTemplate": "{{ data.query.q }}"
-      },
-      "id": "L60WHU_QX4",
-      "meta": {
-        "category": "logic",
-        "description": "",
-        "id": "gZuPKpPt0k",
-        "label": "Switch",
-        "name": "switch",
-        "x": 1660,
-        "y": 180
-      },
-      "outputIds": [
-        [
-        ],
-        [
-          "tYhnNx-ffG"
-        ],
-        [
-          "RLbNLWCNiH"
-        ],
-        [
-          "p9LdNC9MS1"
-        ],
-        [
-          "9sv_3prXSF"
-        ],
-        [
-          "fOpwjYyzPq"
-        ],
-        [
-          "3LN3cJslbq"
-        ]
-      ],
-      "type": "SwitchNode"
-    },
-    {
-      "config": {
         "message": "",
         "property": ""
       },
@@ -96,8 +26,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1980,
-        "y": 660
+        "x": 720,
+        "y": 500
       },
       "outputIds": [
       ],
@@ -115,8 +45,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1840,
-        "y": 840
+        "x": 580,
+        "y": 720
       },
       "outputIds": [
       ],
@@ -134,8 +64,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1720,
-        "y": 640
+        "x": 460,
+        "y": 500
       },
       "outputIds": [
       ],
@@ -153,8 +83,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1600,
-        "y": 840
+        "x": 320,
+        "y": 720
       },
       "outputIds": [
       ],
@@ -172,8 +102,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1480,
-        "y": 640
+        "x": 220,
+        "y": 500
       },
       "outputIds": [
       ],
@@ -191,8 +121,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1340,
-        "y": 860
+        "x": 60,
+        "y": 720
       },
       "outputIds": [
       ],
@@ -214,8 +144,8 @@
         "id": "kur9-wQ5Tr",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1480,
-        "y": 560
+        "x": 220,
+        "y": 420
       },
       "outputIds": [
         [
@@ -240,8 +170,8 @@
         "id": "tvktYfBZRp",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1340,
-        "y": 760
+        "x": 60,
+        "y": 620
       },
       "outputIds": [
         [
@@ -266,8 +196,8 @@
         "id": "_0oFMM-7MU",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1600,
-        "y": 740
+        "x": 320,
+        "y": 620
       },
       "outputIds": [
         [
@@ -292,8 +222,8 @@
         "id": "zkUxVxIW8e",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1720,
-        "y": 540
+        "x": 460,
+        "y": 420
       },
       "outputIds": [
         [
@@ -318,8 +248,8 @@
         "id": "gz7Ipy3clw",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1840,
-        "y": 740
+        "x": 580,
+        "y": 620
       },
       "outputIds": [
         [
@@ -344,8 +274,8 @@
         "id": "E8vPqVuZkK",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1980,
-        "y": 580
+        "x": 720,
+        "y": 420
       },
       "outputIds": [
         [
@@ -353,6 +283,202 @@
         ]
       ],
       "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-json",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "encode-json",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-base64",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "encode-base64",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-hex",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-xml",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "encode-jwt",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-jwt",
+            "dontBreak": false
+          }
+        ],
+        "switchTemplate": "{{ data.query.q }}"
+      },
+      "id": "wSk_2xlb_9",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gZuPKpPt0k",
+        "label": "Switch",
+        "name": "switch",
+        "x": 620,
+        "y": 180
+      },
+      "outputIds": [
+        [
+          "VKErxr1PpX"
+        ],
+        [
+          "tYhnNx-ffG"
+        ],
+        [
+          "RLbNLWCNiH"
+        ],
+        [
+          "p9LdNC9MS1"
+        ],
+        [
+          "9sv_3prXSF"
+        ],
+        [
+          "fOpwjYyzPq"
+        ],
+        [
+          "3LN3cJslbq"
+        ],
+        [
+          "Gl2ZsxHjV2"
+        ],
+        [
+          "dsIICO12-w"
+        ]
+      ],
+      "type": "SwitchNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "TgptQlsn0p",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 880,
+        "y": 720
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "Gl2ZsxHjV2",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "kur9-wQ5Tr",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 880,
+        "y": 640
+      },
+      "outputIds": [
+        [
+          "TgptQlsn0p"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "4lSa2FlEYN",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1040,
+        "y": 540
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "dsIICO12-w",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "E8vPqVuZkK",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1040,
+        "y": 460
+      },
+      "outputIds": [
+        [
+          "4lSa2FlEYN"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "VKErxr1PpX",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1160,
+        "y": 360
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
     }
   ],
   "triggers": [
@@ -367,12 +493,12 @@
         "label": "Encoding/Decoding",
         "name": "webhook",
         "uiId": "2FXP4X3vjH",
-        "x": 1660,
-        "y": 20
+        "x": 620,
+        "y": 60
       },
       "outputIds": [
         [
-          "L60WHU_QX4"
+          "wSk_2xlb_9"
         ]
       ],
       "type": "webhook"

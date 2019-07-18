@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-07-09T20:04:45.144Z",
+  "_exportDate": "2019-07-18T17:10:54.393Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -16,106 +16,6 @@
   "nodes": [
     {
       "config": {
-        "cases": [
-          {
-            "caseLabel": "",
-            "caseTemplate": "3.1",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "3.2",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "3.3",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "3.4",
-            "dontBreak": false
-          },
-          {
-            "caseLabel": "",
-            "caseTemplate": "3.5",
-            "dontBreak": false
-          }
-        ],
-        "switchTemplate": "{{ data.query.q }}"
-      },
-      "id": "QJGcrfb2MJ",
-      "meta": {
-        "category": "logic",
-        "description": "",
-        "id": "gZuPKpPt0k",
-        "label": "Switch",
-        "name": "switch",
-        "x": 1660,
-        "y": 180
-      },
-      "outputIds": [
-        [
-        ],
-        [
-          "9anYEhxQjX"
-        ],
-        [
-          "pAEbQ8srIs"
-        ],
-        [
-          "vj4Cb-65YI"
-        ],
-        [
-          "3uvy5olE6z"
-        ],
-        [
-          "nvIOiiZmPG"
-        ]
-      ],
-      "type": "SwitchNode"
-    },
-    {
-      "config": {
-        "message": "",
-        "property": ""
-      },
-      "id": "x9F7VIbd1T",
-      "meta": {
-        "category": "output",
-        "description": "",
-        "id": "CwvDon2R3w",
-        "label": "Debug",
-        "name": "debug",
-        "x": 1840,
-        "y": 800
-      },
-      "outputIds": [
-      ],
-      "type": "DebugNode"
-    },
-    {
-      "config": {
-        "message": "",
-        "property": ""
-      },
-      "id": "OpzycICM9I",
-      "meta": {
-        "category": "output",
-        "description": "",
-        "id": "CwvDon2R3w",
-        "label": "Debug",
-        "name": "debug",
-        "x": 1720,
-        "y": 600
-      },
-      "outputIds": [
-      ],
-      "type": "DebugNode"
-    },
-    {
-      "config": {
         "message": "",
         "property": ""
       },
@@ -126,8 +26,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1600,
-        "y": 800
+        "x": 540,
+        "y": 760
       },
       "outputIds": [
       ],
@@ -145,8 +45,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1480,
-        "y": 600
+        "x": 420,
+        "y": 560
       },
       "outputIds": [
       ],
@@ -164,8 +64,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1340,
-        "y": 820
+        "x": 300,
+        "y": 760
       },
       "outputIds": [
       ],
@@ -187,8 +87,8 @@
         "id": "kur9-wQ5Tr",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1480,
-        "y": 520
+        "x": 420,
+        "y": 480
       },
       "outputIds": [
         [
@@ -213,8 +113,8 @@
         "id": "tvktYfBZRp",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1340,
-        "y": 720
+        "x": 300,
+        "y": 660
       },
       "outputIds": [
         [
@@ -239,8 +139,8 @@
         "id": "_0oFMM-7MU",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1600,
-        "y": 700
+        "x": 540,
+        "y": 660
       },
       "outputIds": [
         [
@@ -251,55 +151,69 @@
     },
     {
       "config": {
-        "bodyTemplate": "{ \"result\" : {{working.result}} }",
-        "bodyTemplateType": "string",
-        "headerInfo": [
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "string-concat",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "string-separation",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "string-replicate",
+            "dontBreak": false
+          }
         ],
-        "replyIdPath": "",
-        "responseCodeTemplate": ""
+        "switchTemplate": "{{ data.query.q }}"
       },
-      "id": "3uvy5olE6z",
+      "id": "kPGxDP8b5P",
       "meta": {
-        "category": "output",
+        "category": "logic",
         "description": "",
-        "id": "zkUxVxIW8e",
-        "label": "Webhook Reply",
-        "name": "webhook-reply",
-        "x": 1720,
-        "y": 500
+        "id": "gZuPKpPt0k",
+        "label": "Switch",
+        "name": "switch",
+        "x": 480,
+        "y": 300
       },
       "outputIds": [
         [
-          "OpzycICM9I"
+          "O5oaTc0Omd"
+        ],
+        [
+          "9anYEhxQjX"
+        ],
+        [
+          "pAEbQ8srIs"
+        ],
+        [
+          "vj4Cb-65YI"
         ]
       ],
-      "type": "WebhookReplyNode"
+      "type": "SwitchNode"
     },
     {
       "config": {
-        "bodyTemplate": "{ \"result\" : {{working.result}} }",
-        "bodyTemplateType": "string",
-        "headerInfo": [
-        ],
-        "replyIdPath": "",
-        "responseCodeTemplate": ""
+        "message": "",
+        "property": ""
       },
-      "id": "nvIOiiZmPG",
+      "id": "O5oaTc0Omd",
       "meta": {
         "category": "output",
         "description": "",
-        "id": "gz7Ipy3clw",
-        "label": "Webhook Reply",
-        "name": "webhook-reply",
-        "x": 1840,
-        "y": 700
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 660,
+        "y": 480
       },
       "outputIds": [
-        [
-          "x9F7VIbd1T"
-        ]
       ],
-      "type": "WebhookReplyNode"
+      "type": "DebugNode"
     }
   ],
   "triggers": [
@@ -311,15 +225,15 @@
         "category": "trigger",
         "description": "",
         "id": "V~j7MvcjUN",
-        "label": "Webhook",
+        "label": "String",
         "name": "webhook",
         "uiId": "AmA2JcdMkW",
-        "x": 1660,
-        "y": 20
+        "x": 480,
+        "y": 160
       },
       "outputIds": [
         [
-          "QJGcrfb2MJ"
+          "kPGxDP8b5P"
         ]
       ],
       "type": "webhook"
