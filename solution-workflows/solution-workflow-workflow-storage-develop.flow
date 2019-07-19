@@ -1,0 +1,273 @@
+{
+  "_exportDate": "2019-07-19T19:51:18.961Z",
+  "_type": "flow",
+  "applicationId": "5c40ecbac853d20008cd96ba",
+  "customNodeVersions": [
+  ],
+  "customNodes": [
+  ],
+  "description": "",
+  "enabled": true,
+  "flowClass": "cloud",
+  "globals": [
+  ],
+  "id": "5d28c29b16770d0008c01387",
+  "name": "Solution Workflow: Workflow Storage",
+  "nodes": [
+    {
+      "config": {
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "count-workflow-runs",
+            "dontBreak": false
+          }
+        ],
+        "switchTemplate": "{{ data.query.q }}"
+      },
+      "id": "WTSy8leClo",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gZuPKpPt0k",
+        "label": "Switch",
+        "name": "switch",
+        "x": 260,
+        "y": 300
+      },
+      "outputIds": [
+        [
+        ],
+        [
+          "fxFBWwtkHN"
+        ]
+      ],
+      "type": "SwitchNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "cookieInfo": [
+        ],
+        "experienceVersion": "develop",
+        "headerInfo": [
+          {
+            "keyTemplate": "Content-Type",
+            "valueTemplate": "application/json"
+          }
+        ],
+        "replyIdPath": "",
+        "replyType": "custom",
+        "responseCodeTemplate": ""
+      },
+      "id": "54BN4Sl4KB",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "QOeWFycrcN",
+        "label": "Endpoint Reply",
+        "name": "endpoint-reply",
+        "x": 320,
+        "y": 720
+      },
+      "outputIds": [
+        [
+          "Tdt9Ssq2KW"
+        ]
+      ],
+      "type": "EndpointReplyNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "FcAJtGdTzH",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 320,
+        "y": 900
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "expression": "{{data.body.count}}"
+      },
+      "id": "fxFBWwtkHN",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "np91rWm8w4",
+        "label": "Conditional",
+        "name": "conditional",
+        "x": 200,
+        "y": 440
+      },
+      "outputIds": [
+        [
+          "ajMD61fjtR"
+        ],
+        [
+          "I7rXnrf6ST"
+        ]
+      ],
+      "type": "ConditionalNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {} }",
+        "bodyTemplateType": "string",
+        "cookieInfo": [
+        ],
+        "experienceVersion": "develop",
+        "headerInfo": [
+          {
+            "keyTemplate": "Content-Type",
+            "valueTemplate": "application/json"
+          }
+        ],
+        "replyIdPath": "",
+        "replyType": "custom",
+        "responseCodeTemplate": ""
+      },
+      "id": "OgnFjErWfz",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "QOeWFycrcN",
+        "label": "Endpoint Reply",
+        "name": "endpoint-reply",
+        "x": 100,
+        "y": 640
+      },
+      "outputIds": [
+        [
+          "qgP-UEmdGr"
+        ]
+      ],
+      "type": "EndpointReplyNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "qgP-UEmdGr",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 100,
+        "y": 740
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "keyName": "count-{{ data.query.q }}",
+        "resultPath": "",
+        "value": "1",
+        "valueType": "incr"
+      },
+      "id": "ajMD61fjtR",
+      "meta": {
+        "category": "data",
+        "description": "",
+        "id": "CpH54UaAcP",
+        "label": "Storage: Set Value",
+        "name": "store-value",
+        "x": 100,
+        "y": 540
+      },
+      "outputIds": [
+        [
+          "OgnFjErWfz"
+        ]
+      ],
+      "type": "StoreValueNode"
+    },
+    {
+      "config": {
+        "defaultValue": "0",
+        "defaultValueType": "json",
+        "keyName": "count-{{ data.query.q }}",
+        "valuePath": "working.result"
+      },
+      "id": "I7rXnrf6ST",
+      "meta": {
+        "category": "data",
+        "description": "",
+        "id": "QzagTTZfMk",
+        "label": "Storage: Get Value",
+        "name": "get-value",
+        "x": 320,
+        "y": 620
+      },
+      "outputIds": [
+        [
+          "54BN4Sl4KB"
+        ]
+      ],
+      "type": "GetValueNode"
+    },
+    {
+      "config": {
+        "keyName": "count-{{ data.query.q }}",
+        "resultPath": "",
+        "value": "1",
+        "valueType": "clear"
+      },
+      "id": "Tdt9Ssq2KW",
+      "meta": {
+        "category": "data",
+        "description": "",
+        "id": "CpH54UaAcP",
+        "label": "Storage: Set Value",
+        "name": "store-value",
+        "x": 340,
+        "y": 800
+      },
+      "outputIds": [
+        [
+          "FcAJtGdTzH"
+        ]
+      ],
+      "type": "StoreValueNode"
+    }
+  ],
+  "triggers": [
+    {
+      "config": {
+      },
+      "key": "5d2f35cbf82c4f00073cea6e",
+      "meta": {
+        "category": "trigger",
+        "description": "",
+        "id": "V~j7MvcjUN",
+        "label": "Workflow Storage",
+        "name": "webhook",
+        "uiId": "ZM694r3oOr",
+        "x": 260,
+        "y": 140
+      },
+      "outputIds": [
+        [
+          "WTSy8leClo"
+        ]
+      ],
+      "type": "webhook"
+    }
+  ]
+}

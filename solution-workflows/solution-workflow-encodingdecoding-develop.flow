@@ -1,0 +1,611 @@
+{
+  "_exportDate": "2019-07-19T20:01:10.991Z",
+  "_type": "flow",
+  "applicationId": "5c40ecbac853d20008cd96ba",
+  "customNodeVersions": [
+  ],
+  "customNodes": [
+  ],
+  "description": "",
+  "enabled": true,
+  "flowClass": "cloud",
+  "globals": [
+  ],
+  "id": "5d27845e16770d0008c0132d",
+  "name": "Solution Workflow: Encoding/Decoding",
+  "nodes": [
+    {
+      "config": {
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-json",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "encode-json",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-base64",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "encode-base64",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-hex",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-xml",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "encode-jwt",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "decode-jwt",
+            "dontBreak": false
+          }
+        ],
+        "switchTemplate": "{{ data.query.q }}"
+      },
+      "id": "uKUBDqQ5hU",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gZuPKpPt0k",
+        "label": "Switch",
+        "name": "switch",
+        "x": 680,
+        "y": 300
+      },
+      "outputIds": [
+        [
+        ],
+        [
+          "AJEavz3jPf"
+        ],
+        [
+          "fS5w-qqRg_"
+        ],
+        [
+          "cW0P-YtFbd"
+        ],
+        [
+          "cRBeMVkm7D"
+        ],
+        [
+          "q7uVM1Ucqv"
+        ],
+        [
+          "CuxVcR1F3B"
+        ],
+        [
+          "1sf1V5nqrT"
+        ],
+        [
+        ]
+      ],
+      "type": "SwitchNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "WfNm4e8251",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 940,
+        "y": 600
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "mHX3g5Iqa7",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 800,
+        "y": 860
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "I-KZF56evx",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 680,
+        "y": 520
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "JAK_yd7C8b",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 560,
+        "y": 680
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "JpkB-3_wxS",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 440,
+        "y": 1020
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "-NpsiF0l70",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 280,
+        "y": 680
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{{jsonEncode working.result}}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "bovLKP8RNg",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "kur9-wQ5Tr",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 440,
+        "y": 940
+      },
+      "outputIds": [
+        [
+          "JpkB-3_wxS"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{ working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "QSBNCFGo8l",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "tvktYfBZRp",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 280,
+        "y": 600
+      },
+      "outputIds": [
+        [
+          "-NpsiF0l70"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : \"{{decodeBase64 data.body.value}}\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "cW0P-YtFbd",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "_0oFMM-7MU",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 560,
+        "y": 600
+      },
+      "outputIds": [
+        [
+          "JAK_yd7C8b"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : \"{{{encodeBase64 data.body.value}}}\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "cRBeMVkm7D",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "zkUxVxIW8e",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 680,
+        "y": 440
+      },
+      "outputIds": [
+        [
+          "I-KZF56evx"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\": {{jsonEncode working}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "b-Jqg4J0jP",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "gz7Ipy3clw",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 800,
+        "y": 780
+      },
+      "outputIds": [
+        [
+          "mHX3g5Iqa7"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : \"under construction\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "wg67mwJdQH",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "E8vPqVuZkK",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 940,
+        "y": 520
+      },
+      "outputIds": [
+        [
+          "WfNm4e8251"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "destination": "working",
+        "source": "data.body.raw"
+      },
+      "id": "AJEavz3jPf",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "3SJFvLdyUG",
+        "label": "JSON: Decode",
+        "name": "json-decode",
+        "x": 280,
+        "y": 440
+      },
+      "outputIds": [
+        [
+          "K6LA4JQiqD"
+        ]
+      ],
+      "type": "JsonDecodeNode"
+    },
+    {
+      "config": {
+        "statements": [
+          {
+            "expression": "{{working.num1}} + {{working.num2}}",
+            "resultPath": "working.result"
+          }
+        ]
+      },
+      "id": "K6LA4JQiqD",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "HT-YvYzLCM",
+        "label": "Math",
+        "name": "math",
+        "x": 280,
+        "y": 520
+      },
+      "outputIds": [
+        [
+          "QSBNCFGo8l"
+        ]
+      ],
+      "type": "MathNode"
+    },
+    {
+      "config": {
+        "statements": [
+          {
+            "expression": "{{data.body.num1}} + {{data.body.num2}}",
+            "resultPath": "working.sum"
+          }
+        ]
+      },
+      "id": "fS5w-qqRg_",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "HT-YvYzLCM",
+        "label": "Math",
+        "name": "math",
+        "x": 440,
+        "y": 780
+      },
+      "outputIds": [
+        [
+          "nUgjebMf0I"
+        ]
+      ],
+      "type": "MathNode"
+    },
+    {
+      "config": {
+        "destination": "working.result",
+        "source": "working"
+      },
+      "id": "nUgjebMf0I",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "qTjrpha3Z6",
+        "label": "JSON: Encode",
+        "name": "json-encode",
+        "x": 440,
+        "y": 860
+      },
+      "outputIds": [
+        [
+          "bovLKP8RNg"
+        ]
+      ],
+      "type": "JsonEncodeNode"
+    },
+    {
+      "config": {
+        "script": "/*\n * payload variable contains current payload.\n * e.g. payload.data.myValue\n *\n * You can modify the current payload variable\n * or return an object that will entirely\n * replace the payload.\n *\n * console.log() will write a message to\n * the Debug tab.\n *\n * The Buffer object is available for\n * complex parsing: https://nodejs.org/dist/latest-v6.x/docs/api/buffer.html\n*/\nconst buf = Buffer.from(payload.data.body.raw, \"hex\")\n\npayload.working = {\n  temperature: buf.readUInt32LE(0, 4),\n  voltage: buf.readUInt32LE(4, 4)\n}"
+      },
+      "id": "q7uVM1Ucqv",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "s-ElcTpHVo",
+        "label": "Function",
+        "name": "function",
+        "x": 800,
+        "y": 700
+      },
+      "outputIds": [
+        [
+          "b-Jqg4J0jP"
+        ]
+      ],
+      "type": "RawFunctionNode"
+    },
+    {
+      "config": {
+        "documentPath": "data.body",
+        "resultFormatTemplate": "json",
+        "resultPath": "working.answer",
+        "selectorTemplate": ""
+      },
+      "id": "CuxVcR1F3B",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "CuxVcR1F3B",
+        "label": "HTML/XML Parser",
+        "name": "html-parser",
+        "x": 940,
+        "y": 440
+      },
+      "outputIds": [
+        [
+          "wg67mwJdQH"
+        ]
+      ],
+      "type": "HtmlParserNode"
+    },
+    {
+      "config": {
+        "algorithmTemplate": "HS256",
+        "dataTemplate": "data.body.data",
+        "dataTemplateType": "path",
+        "destinationPath": "working.token",
+        "expiresIn": 86400,
+        "issuerTemplate": "",
+        "secretTemplate": "{{data.body.secret}}"
+      },
+      "id": "1sf1V5nqrT",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "1sf1V5nqrT",
+        "isExpRequired": true,
+        "label": "JWT: Create",
+        "name": "jwt-create",
+        "timeUnit": "Days",
+        "x": 1140,
+        "y": 580
+      },
+      "outputIds": [
+        [
+          "pCAci1nTca"
+        ]
+      ],
+      "type": "JWTCreateNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "xH_T_lW6rn",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1140,
+        "y": 780
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"token\" : \"{{working.token}}\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "pCAci1nTca",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "E8vPqVuZkK",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1140,
+        "y": 700
+      },
+      "outputIds": [
+        [
+          "xH_T_lW6rn"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    }
+  ],
+  "triggers": [
+    {
+      "config": {
+      },
+      "key": "5d278522bb63290008c0f5e3",
+      "meta": {
+        "category": "trigger",
+        "description": "",
+        "id": "V~j7MvcjUN",
+        "label": "Encoding/Decoding",
+        "name": "webhook",
+        "uiId": "QQMjnipUzI",
+        "x": 680,
+        "y": 140
+      },
+      "outputIds": [
+        [
+          "uKUBDqQ5hU"
+        ]
+      ],
+      "type": "webhook"
+    }
+  ]
+}

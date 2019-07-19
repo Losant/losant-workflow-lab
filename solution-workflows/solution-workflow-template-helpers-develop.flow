@@ -1,0 +1,302 @@
+{
+  "_exportDate": "2019-07-19T19:45:12.552Z",
+  "_type": "flow",
+  "applicationId": "5c40ecbac853d20008cd96ba",
+  "customNodeVersions": [
+  ],
+  "customNodes": [
+  ],
+  "description": "",
+  "enabled": true,
+  "flowClass": "cloud",
+  "globals": [
+  ],
+  "id": "5d2f2b33f82c4f00073cea6a",
+  "name": "Solution Workflow: Template Helpers",
+  "nodes": [
+    {
+      "config": {
+        "cases": [
+          {
+            "caseLabel": "",
+            "caseTemplate": "format-template",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "length-template",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "trim-conversion",
+            "dontBreak": false
+          }
+        ],
+        "switchTemplate": "{{ data.query.q }}"
+      },
+      "id": "M8MzWw-xvS",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gZuPKpPt0k",
+        "label": "Switch",
+        "name": "switch",
+        "x": 780,
+        "y": 260
+      },
+      "outputIds": [
+        [
+        ],
+        [
+          "wYFWzIGmX4"
+        ],
+        [
+          "oXXdl1WEm5"
+        ],
+        [
+          "0s6k3s1iUo"
+        ]
+      ],
+      "type": "SwitchNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "ZoGmQRBTGe",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 820,
+        "y": 900
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "3uhUVMLJgK",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 700,
+        "y": 700
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "fKnZS1MiN_",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "kur9-wQ5Tr",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 700,
+        "y": 620
+      },
+      "outputIds": [
+        [
+          "3uhUVMLJgK"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : \"{{working.result}}\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "drGw_ezUHm",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "tvktYfBZRp",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 560,
+        "y": 820
+      },
+      "outputIds": [
+        [
+          "PXn-h-tloB"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : \"{{working.result}}\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "J09v5rKJ0m",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "_0oFMM-7MU",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 820,
+        "y": 800
+      },
+      "outputIds": [
+        [
+          "ZoGmQRBTGe"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "PXn-h-tloB",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 560,
+        "y": 900
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "rules": [
+          {
+            "destination": "working.result",
+            "type": "set",
+            "valueTemplate": "{{format data.body.number ',.2f'}}"
+          }
+        ]
+      },
+      "id": "wYFWzIGmX4",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "ecfJE7liPQ",
+        "label": "Mutate",
+        "name": "mutate",
+        "x": 580,
+        "y": 460
+      },
+      "outputIds": [
+        [
+          "drGw_ezUHm"
+        ]
+      ],
+      "type": "MutateNode"
+    },
+    {
+      "config": {
+        "statements": [
+          {
+            "expression": "{{length data.body.array1}}+{{length data.body.array2}}",
+            "resultPath": "working.result"
+          }
+        ]
+      },
+      "id": "oXXdl1WEm5",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "HMxrt-KcqC",
+        "label": "Math",
+        "name": "math",
+        "x": 720,
+        "y": 520
+      },
+      "outputIds": [
+        [
+          "fKnZS1MiN_"
+        ]
+      ],
+      "type": "MathNode"
+    },
+    {
+      "config": {
+        "rules": [
+          {
+            "destination": "working.result",
+            "type": "set",
+            "valueTemplate": "{{trim data.body.string}}"
+          }
+        ]
+      },
+      "id": "0s6k3s1iUo",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "ecfJE7liPQ",
+        "label": "Mutate",
+        "name": "mutate",
+        "x": 860,
+        "y": 440
+      },
+      "outputIds": [
+        [
+          "J09v5rKJ0m"
+        ]
+      ],
+      "type": "MutateNode"
+    }
+  ],
+  "triggers": [
+    {
+      "config": {
+      },
+      "key": "5d2f2b28022e19000b80a392",
+      "meta": {
+        "category": "trigger",
+        "description": "",
+        "id": "V~j7MvcjUN",
+        "label": "Webhook",
+        "name": "webhook",
+        "uiId": "n4tjFlt4G6",
+        "x": 780,
+        "y": 80
+      },
+      "outputIds": [
+        [
+          "M8MzWw-xvS"
+        ]
+      ],
+      "type": "webhook"
+    }
+  ]
+}

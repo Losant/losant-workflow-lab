@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-07-15T14:37:20.760Z",
+  "_exportDate": "2019-07-19T19:17:02.425Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -19,12 +19,17 @@
         "cases": [
           {
             "caseLabel": "",
-            "caseTemplate": "2.1",
+            "caseTemplate": "add-random-number-array",
             "dontBreak": false
           },
           {
             "caseLabel": "",
-            "caseTemplate": "2.2",
+            "caseTemplate": "array-index",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "loop-array",
             "dontBreak": false
           }
         ],
@@ -48,6 +53,9 @@
         ],
         [
           "UXp4vJp6fe"
+        ],
+        [
+          "OCWOnIK7-f"
         ]
       ],
       "type": "SwitchNode"
@@ -270,13 +278,163 @@
         ]
       ],
       "type": "ArrayNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "tZwHd8WJB4",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1180,
+        "y": 660
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : [{{data.body.array}}] }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "d6hQ7xVMYb",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "kur9-wQ5Tr",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1180,
+        "y": 580
+      },
+      "outputIds": [
+        [
+          "tZwHd8WJB4"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "currentItemPath": "working.current",
+        "loopSourcePath": "data.body.array"
+      },
+      "id": "OCWOnIK7-f",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "groupStartX": 260,
+        "groupStartY": 200,
+        "id": "cWj5BP3spk",
+        "label": "Loop",
+        "name": "loop",
+        "x": 1020,
+        "y": 440
+      },
+      "outputIds": [
+        [
+          "d6hQ7xVMYb"
+        ],
+        [
+          "_DXX6CDU1d"
+        ]
+      ],
+      "type": "LoopNode"
+    },
+    {
+      "config": {
+        "loopNodeId": "OCWOnIK7-f",
+        "shouldBreak": false
+      },
+      "id": "YAWlM5tfJ0",
+      "meta": {
+        "category": "loop",
+        "description": "",
+        "groupId": "OCWOnIK7-f",
+        "id": "8NQUKP5c2-",
+        "label": "Next",
+        "name": "loop-next",
+        "x": 260,
+        "y": 680
+      },
+      "outputIds": [
+      ],
+      "type": "LoopCapNode"
+    },
+    {
+      "config": {
+        "statements": [
+          {
+            "expression": "{{working.current.value}}+{{data.body.randomNumber}}",
+            "resultPath": "data.body.summed"
+          }
+        ]
+      },
+      "id": "_DXX6CDU1d",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "groupId": "OCWOnIK7-f",
+        "id": "_DXX6CDU1d",
+        "label": "Math",
+        "name": "math",
+        "x": 260,
+        "y": 280
+      },
+      "outputIds": [
+        [
+          "eNhWBClfz2"
+        ]
+      ],
+      "type": "MathNode"
+    },
+    {
+      "config": {
+        "destArrayPath": "data.body.array",
+        "rules": [
+          {
+            "indexTemplate": "{{working.current.index}}",
+            "inputTemplate": "{{data.body.summed}}",
+            "outputPath": "",
+            "type": "replaceAt"
+          }
+        ],
+        "sourceArrayPath": "data.body.array"
+      },
+      "id": "eNhWBClfz2",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "groupId": "OCWOnIK7-f",
+        "id": "eNhWBClfz2",
+        "label": "Array",
+        "name": "array",
+        "x": 260,
+        "y": 380
+      },
+      "outputIds": [
+        [
+          "YAWlM5tfJ0"
+        ]
+      ],
+      "type": "ArrayNode"
     }
   ],
   "triggers": [
     {
       "config": {
       },
-      "key": "5d2759a3965bd1000a7bcf71",
+      "key": "5d2f35cbf82c4f00073cea6e",
       "meta": {
         "category": "trigger",
         "description": "",
