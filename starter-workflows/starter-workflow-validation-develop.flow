@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-07-18T17:37:11.502Z",
+  "_exportDate": "2019-08-15T20:01:52.266Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -16,51 +16,6 @@
   "nodes": [
     {
       "config": {
-        "message": "",
-        "property": ""
-      },
-      "id": "M79qT2WP00",
-      "meta": {
-        "category": "output",
-        "description": "",
-        "id": "CwvDon2R3w",
-        "label": "Debug",
-        "name": "debug",
-        "x": 120,
-        "y": 520
-      },
-      "outputIds": [
-      ],
-      "type": "DebugNode"
-    },
-    {
-      "config": {
-        "bodyTemplate": "{ \"result\" : {{working.result}} }",
-        "bodyTemplateType": "string",
-        "headerInfo": [
-        ],
-        "replyIdPath": "",
-        "responseCodeTemplate": ""
-      },
-      "id": "KCYQH0k1PZ",
-      "meta": {
-        "category": "output",
-        "description": "",
-        "id": "tvktYfBZRp",
-        "label": "Webhook Reply",
-        "name": "webhook-reply",
-        "x": 120,
-        "y": 420
-      },
-      "outputIds": [
-        [
-          "M79qT2WP00"
-        ]
-      ],
-      "type": "WebhookReplyNode"
-    },
-    {
-      "config": {
         "cases": [
           {
             "caseLabel": "",
@@ -68,7 +23,7 @@
             "dontBreak": false
           }
         ],
-        "switchTemplate": "{{ data.query.q }}"
+        "switchTemplate": "{{ data.query.id }}"
       },
       "id": "ZHVEK9XmQw",
       "meta": {
@@ -85,7 +40,8 @@
           "1tq5FnuBct"
         ],
         [
-          "KCYQH0k1PZ"
+          "ergP2QhweS",
+          "9sca6fBLD2"
         ]
       ],
       "type": "SwitchNode"
@@ -104,6 +60,96 @@
         "name": "debug",
         "x": 320,
         "y": 420
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : \"success\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": "200"
+      },
+      "id": "9sca6fBLD2",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "tvktYfBZRp",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 220,
+        "y": 640
+      },
+      "outputIds": [
+        [
+          "e8SE_vmvr8"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "n1yh4PxYzV",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 20,
+        "y": 740
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"error\" : \"One or more user fields are missing.\" }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": "400"
+      },
+      "id": "ergP2QhweS",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "tvktYfBZRp",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 20,
+        "y": 640
+      },
+      "outputIds": [
+        [
+          "n1yh4PxYzV"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "e8SE_vmvr8",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 220,
+        "y": 740
       },
       "outputIds": [
       ],
