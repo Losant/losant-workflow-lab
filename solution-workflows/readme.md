@@ -7,6 +7,4 @@
 
 The [Losant Workflow Lab](http://docs.losant.com/workflows/workflow-lab/lab/) is an interactive tool that provides a set of challenges to solve using Losant’s Visual Workflow Engine. The Workflow Lab is intended to be used by both new and experienced users to grow their workflow development skills.
 
-In this repository, you will find two folders. One containing Starter Workflows and the other containing Solution Workflows, which hold the solutions for each test and test suite in the Workflow Lab.
-
-The Solution Workflows hold one solution for each test, however, there are many ways to solve them and we recommend trying before peeking!
+In case you have trouble completing a test in the Workflow Lab, solutions to each test are available on in this folder. If the test solutions do not address your concern, feel free to post a question in the University section of the [Losant Forums](https://forums.losant.com/c/losant-university).

@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89a30b46-66fe-422a-8bfc-8b47f5b4c35b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-mutate-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-array-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-array-develop.flow" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solution-workflows/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/starter-workflows/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-array-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-array.flow" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-encodingdecoding-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-encodingdecoding-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-math-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-math-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-string-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-string-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-template-helpers-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-template-helpers-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-validation-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-validation-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-workflow-storage-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-workflow-storage-develop.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-math-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-math.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-string-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-string.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-template-helpers-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-template-helpers.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-validation-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-validation.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-workflow-storage-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-workflow-storage.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-array-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-array.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-encodingdecoding-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-encodingdecoding-develop.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-math-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-math.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-mutate-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-mutate.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-string-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-string.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-template-helpers-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-template-helpers.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-validation-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-validation.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-workflow-storage-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-workflow-storage.flow" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,6 +73,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/starter-workflows" />
       <recent name="$PROJECT_DIR$/solution-workflows" />
     </key>
   </component>
