@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-07-19T19:17:02.425Z",
+  "_exportDate": "2019-09-10T18:34:07.002Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -29,11 +29,16 @@
           },
           {
             "caseLabel": "",
-            "caseTemplate": "loop-array",
+            "caseTemplate": "add-to-element",
+            "dontBreak": false
+          },
+          {
+            "caseLabel": "",
+            "caseTemplate": "array-flatten",
             "dontBreak": false
           }
         ],
-        "switchTemplate": "{{ data.query.q }}"
+        "switchTemplate": "{{ data.query.id }}"
       },
       "id": "o6xwEimMA-",
       "meta": {
@@ -42,8 +47,8 @@
         "id": "gZuPKpPt0k",
         "label": "Switch",
         "name": "switch",
-        "x": 780,
-        "y": 240
+        "x": 980,
+        "y": 220
       },
       "outputIds": [
         [
@@ -56,6 +61,9 @@
         ],
         [
           "OCWOnIK7-f"
+        ],
+        [
+          "43LqKZwPWo"
         ]
       ],
       "type": "SwitchNode"
@@ -191,7 +199,7 @@
         "label": "Next",
         "name": "loop-next",
         "x": 260,
-        "y": 820
+        "y": 400
       },
       "outputIds": [
       ],
@@ -215,7 +223,7 @@
         "label": "Math",
         "name": "math",
         "x": 240,
-        "y": 460
+        "y": 300
       },
       "outputIds": [
         [
@@ -255,12 +263,12 @@
       "config": {
         "rules": [
           {
-            "inputTemplate": "{{data.body.number}}",
+            "inputTemplate": "{{data.body.random}}",
             "outputPath": "working.result",
             "type": "indexOf"
           }
         ],
-        "sourceArrayPath": "data.body.items"
+        "sourceArrayPath": "data.body.numbers"
       },
       "id": "UXp4vJp6fe",
       "meta": {
@@ -291,8 +299,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1180,
-        "y": 660
+        "x": 1020,
+        "y": 620
       },
       "outputIds": [
       ],
@@ -300,7 +308,7 @@
     },
     {
       "config": {
-        "bodyTemplate": "{ \"result\" : [{{data.body.array}}] }",
+        "bodyTemplate": "{ \"result\" : {{ jsonEncode working.result}} }",
         "bodyTemplateType": "string",
         "headerInfo": [
         ],
@@ -314,8 +322,8 @@
         "id": "kur9-wQ5Tr",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1180,
-        "y": 580
+        "x": 1020,
+        "y": 540
       },
       "outputIds": [
         [
@@ -327,7 +335,7 @@
     {
       "config": {
         "currentItemPath": "working.current",
-        "loopSourcePath": "data.body.array"
+        "loopSourcePath": "data.body.numbers"
       },
       "id": "OCWOnIK7-f",
       "meta": {
@@ -364,8 +372,8 @@
         "id": "8NQUKP5c2-",
         "label": "Next",
         "name": "loop-next",
-        "x": 260,
-        "y": 680
+        "x": 280,
+        "y": 500
       },
       "outputIds": [
       ],
@@ -375,8 +383,8 @@
       "config": {
         "statements": [
           {
-            "expression": "{{working.current.value}}+{{data.body.randomNumber}}",
-            "resultPath": "data.body.summed"
+            "expression": "{{working.current.value}}+{{data.body.random}}",
+            "resultPath": "working.valuePlusRandom"
           }
         ]
       },
@@ -400,16 +408,14 @@
     },
     {
       "config": {
-        "destArrayPath": "data.body.array",
+        "destArrayPath": "working.result",
         "rules": [
           {
-            "indexTemplate": "{{working.current.index}}",
-            "inputTemplate": "{{data.body.summed}}",
-            "outputPath": "",
-            "type": "replaceAt"
+            "inputTemplate": "{{working.valuePlusRandom}}",
+            "type": "push"
           }
         ],
-        "sourceArrayPath": "data.body.array"
+        "sourceArrayPath": "working.result"
       },
       "id": "eNhWBClfz2",
       "meta": {
@@ -428,13 +434,139 @@
         ]
       ],
       "type": "ArrayNode"
+    },
+    {
+      "config": {
+      },
+      "id": "ws9S2E3KvO",
+      "meta": {
+        "annotationText": "Placing 0 on the payload to start adding.",
+        "category": "annotation",
+        "height": 100,
+        "label": "Note",
+        "name": "note",
+        "width": 180,
+        "x": 400,
+        "y": 420
+      },
+      "outputIds": [
+      ],
+      "type": "AnnotationNode"
+    },
+    {
+      "config": {
+        "message": "",
+        "property": ""
+      },
+      "id": "PI9tQVvTYG",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "CwvDon2R3w",
+        "label": "Debug",
+        "name": "debug",
+        "x": 1220,
+        "y": 640
+      },
+      "outputIds": [
+      ],
+      "type": "DebugNode"
+    },
+    {
+      "config": {
+        "bodyTemplate": "{ \"result\" : {{jsonEncode working.result}} }",
+        "bodyTemplateType": "string",
+        "headerInfo": [
+        ],
+        "replyIdPath": "",
+        "responseCodeTemplate": ""
+      },
+      "id": "cmOjRL7gJV",
+      "meta": {
+        "category": "output",
+        "description": "",
+        "id": "kur9-wQ5Tr",
+        "label": "Webhook Reply",
+        "name": "webhook-reply",
+        "x": 1220,
+        "y": 560
+      },
+      "outputIds": [
+        [
+          "PI9tQVvTYG"
+        ]
+      ],
+      "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+        "destArrayPath": "working.result",
+        "rules": [
+          {
+            "type": "flatten"
+          }
+        ],
+        "sourceArrayPath": "data.body.numbers"
+      },
+      "id": "43LqKZwPWo",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "UXp4vJp6fe",
+        "label": "Array",
+        "name": "array",
+        "x": 1220,
+        "y": 400
+      },
+      "outputIds": [
+        [
+          "cmOjRL7gJV"
+        ]
+      ],
+      "type": "ArrayNode"
+    },
+    {
+      "config": {
+      },
+      "id": "XRuY1Ws9U7",
+      "meta": {
+        "annotationText": "Keep in mind, because the output is a number, we do not need to format with `jsonEncode`",
+        "category": "annotation",
+        "height": 160,
+        "label": "Note",
+        "name": "note",
+        "width": 180,
+        "x": 400,
+        "y": 680
+      },
+      "outputIds": [
+      ],
+      "type": "AnnotationNode"
+    },
+    {
+      "config": {
+      },
+      "id": "X8-AHt_iaT",
+      "meta": {
+        "annotationText": "The Switch Node determines which test to run depending on the value of {{data.body.id}}",
+        "category": "annotation",
+        "height": 100,
+        "label": "Note",
+        "name": "note",
+        "width": 260,
+        "x": 700,
+        "y": 140
+      },
+      "outputIds": [
+      ],
+      "type": "AnnotationNode"
     }
   ],
   "triggers": [
     {
       "config": {
       },
-      "key": "5d2f35cbf82c4f00073cea6e",
+      "key": "5d2759a3965bd1000a7bcf71",
       "meta": {
         "category": "trigger",
         "description": "",
@@ -442,7 +574,7 @@
         "label": "Array",
         "name": "webhook",
         "uiId": "5dB_0De4Qq",
-        "x": 780,
+        "x": 980,
         "y": 80
       },
       "outputIds": [

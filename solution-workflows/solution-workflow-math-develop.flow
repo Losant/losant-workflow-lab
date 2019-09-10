@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-07-19T19:32:19.552Z",
+  "_exportDate": "2019-09-10T18:28:53.993Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -48,7 +48,7 @@
             "dontBreak": false
           }
         ],
-        "switchTemplate": "{{ data.query.q }}"
+        "switchTemplate": "{{ data.query.id }}"
       },
       "id": "IL0WnVLgGp",
       "meta": {
@@ -57,8 +57,8 @@
         "id": "gZuPKpPt0k",
         "label": "Switch",
         "name": "switch",
-        "x": 1340,
-        "y": 80
+        "x": 760,
+        "y": 140
       },
       "outputIds": [
         [
@@ -79,7 +79,7 @@
           "XQwImfynKK"
         ],
         [
-          "9ghrroUZvl"
+          "H_EfPnewYp"
         ]
       ],
       "type": "SwitchNode"
@@ -96,8 +96,8 @@
         "id": "g71D3qQEOk",
         "label": "Debug",
         "name": "debug",
-        "x": 960,
-        "y": 1020
+        "x": 380,
+        "y": 1080
       },
       "outputIds": [
       ],
@@ -119,8 +119,8 @@
         "id": "X_8SQiKriF",
         "label": "Math",
         "name": "math",
-        "x": 620,
-        "y": 360
+        "x": 40,
+        "y": 420
       },
       "outputIds": [
         [
@@ -145,8 +145,8 @@
         "id": "X_8SQiKriF",
         "label": "Math",
         "name": "math",
-        "x": 820,
-        "y": 420
+        "x": 240,
+        "y": 480
       },
       "outputIds": [
         [
@@ -171,8 +171,8 @@
         "id": "X_8SQiKriF",
         "label": "Math",
         "name": "math",
-        "x": 1020,
-        "y": 420
+        "x": 440,
+        "y": 480
       },
       "outputIds": [
         [
@@ -197,8 +197,8 @@
         "id": "8pGIJzT3UP",
         "label": "Math",
         "name": "math",
-        "x": 1220,
-        "y": 380
+        "x": 640,
+        "y": 360
       },
       "outputIds": [
         [
@@ -227,8 +227,8 @@
         "id": "a3ym_vnO2j",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 620,
-        "y": 440
+        "x": 40,
+        "y": 500
       },
       "outputIds": [
         [
@@ -257,8 +257,8 @@
         "id": "a3ym_vnO2j",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 820,
-        "y": 500
+        "x": 240,
+        "y": 560
       },
       "outputIds": [
         [
@@ -287,8 +287,8 @@
         "id": "a3ym_vnO2j",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1020,
-        "y": 500
+        "x": 440,
+        "y": 560
       },
       "outputIds": [
         [
@@ -309,8 +309,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1820,
-        "y": 500
+        "x": 1240,
+        "y": 560
       },
       "outputIds": [
       ],
@@ -328,8 +328,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 1520,
-        "y": 580
+        "x": 820,
+        "y": 840
       },
       "outputIds": [
       ],
@@ -351,8 +351,8 @@
         "id": "gz7Ipy3clw",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1620,
-        "y": 420
+        "x": 920,
+        "y": 680
       },
       "outputIds": [
         [
@@ -377,8 +377,8 @@
         "id": "E8vPqVuZkK",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1820,
-        "y": 420
+        "x": 1240,
+        "y": 480
       },
       "outputIds": [
         [
@@ -403,8 +403,8 @@
         "id": "yh07Yzt_B5",
         "label": "Math",
         "name": "math",
-        "x": 1520,
-        "y": 240
+        "x": 840,
+        "y": 280
       },
       "outputIds": [
         [
@@ -424,8 +424,8 @@
         "id": "xcorjUh29q",
         "label": "Conditional",
         "name": "conditional",
-        "x": 1520,
-        "y": 320
+        "x": 840,
+        "y": 580
       },
       "outputIds": [
         [
@@ -453,8 +453,8 @@
         "id": "gz7Ipy3clw",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1420,
-        "y": 420
+        "x": 720,
+        "y": 680
       },
       "outputIds": [
         [
@@ -465,8 +465,8 @@
     },
     {
       "config": {
-        "max": "{{data.body.num2}}",
-        "min": "{{data.body.num1}}",
+        "max": "{{working.num2}}",
+        "min": "{{working.num1}}",
         "resultPath": "working.result"
       },
       "id": "9ghrroUZvl",
@@ -476,8 +476,8 @@
         "id": "J0Xon5fTC2",
         "label": "Random Number",
         "name": "random-number",
-        "x": 1820,
-        "y": 340
+        "x": 1240,
+        "y": 400
       },
       "outputIds": [
         [
@@ -506,8 +506,8 @@
         "id": "a3ym_vnO2j",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 1220,
-        "y": 460
+        "x": 640,
+        "y": 440
       },
       "outputIds": [
         [
@@ -528,12 +528,96 @@
         "id": "g71D3qQEOk",
         "label": "Debug",
         "name": "debug",
-        "x": 1220,
-        "y": 540
+        "x": 640,
+        "y": 520
       },
       "outputIds": [
       ],
       "type": "DebugNode"
+    },
+    {
+      "config": {
+        "statements": [
+          {
+            "expression": "{{data.body.num1}}+1",
+            "resultPath": "working.num1"
+          },
+          {
+            "expression": "{{data.body.num2}}-1",
+            "resultPath": "working.num2"
+          }
+        ]
+      },
+      "id": "H_EfPnewYp",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "yh07Yzt_B5",
+        "label": "Math",
+        "name": "math",
+        "x": 1160,
+        "y": 300
+      },
+      "outputIds": [
+        [
+          "9ghrroUZvl"
+        ]
+      ],
+      "type": "MathNode"
+    },
+    {
+      "config": {
+      },
+      "id": "t36ygRs8la",
+      "meta": {
+        "annotationText": "The Switch Node determines which test to run depending on the value of {{data.body.id}}",
+        "category": "annotation",
+        "height": 100,
+        "label": "Note",
+        "name": "note",
+        "width": 260,
+        "x": 440,
+        "y": 80
+      },
+      "outputIds": [
+      ],
+      "type": "AnnotationNode"
+    },
+    {
+      "config": {
+      },
+      "id": "SygXF_DaJe",
+      "meta": {
+        "annotationText": "We add and subtract 1 to num1 and num2, respectively, as the [Random Number Node is inclusive](https://docs.losant.com/workflows/logic/random-number/).",
+        "category": "annotation",
+        "height": 140,
+        "label": "Note",
+        "name": "note",
+        "width": 260,
+        "x": 1360,
+        "y": 240
+      },
+      "outputIds": [
+      ],
+      "type": "AnnotationNode"
+    },
+    {
+      "config": {
+      },
+      "id": "XP0jO1lkT_",
+      "meta": {
+        "annotationText": "We perform a modulo operation to determine if the number is even, which would give a remainder of 0.",
+        "category": "annotation",
+        "height": 120,
+        "label": "Note",
+        "name": "note",
+        "width": 260,
+        "x": 940,
+        "y": 400
+      },
+      "outputIds": [
+      ],
+      "type": "AnnotationNode"
     }
   ],
   "triggers": [
@@ -548,8 +632,8 @@
         "label": "Webhook",
         "name": "webhook",
         "uiId": "pStrNfIj6O",
-        "x": 1340,
-        "y": 0
+        "x": 760,
+        "y": 60
       },
       "outputIds": [
         [

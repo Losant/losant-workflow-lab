@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-07-19T19:55:04.459Z",
+  "_exportDate": "2019-09-10T18:40:42.627Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -23,7 +23,7 @@
             "dontBreak": false
           }
         ],
-        "switchTemplate": "{{ data.query.q }}"
+        "switchTemplate": "{{ data.query.id }}"
       },
       "id": "NzGHZQ0Hc_",
       "meta": {
@@ -137,12 +137,12 @@
     },
     {
       "config": {
-        "bodyTemplate": "{ \"error\" : \"{{working.error}}\" }",
+        "bodyTemplate": "{ \"result\" : \"One or more user fields are missing.\" }",
         "bodyTemplateType": "string",
         "headerInfo": [
         ],
         "replyIdPath": "",
-        "responseCodeTemplate": ""
+        "responseCodeTemplate": "400"
       },
       "id": "vYKdmB775i",
       "meta": {
@@ -160,18 +160,36 @@
         ]
       ],
       "type": "WebhookReplyNode"
+    },
+    {
+      "config": {
+      },
+      "id": "PWLIP5Rkhh",
+      "meta": {
+        "annotationText": "The Switch Node determines which test to run depending on the value of {{data.body.id}}",
+        "category": "annotation",
+        "height": 100,
+        "label": "Note",
+        "name": "note",
+        "width": 260,
+        "x": 480,
+        "y": 200
+      },
+      "outputIds": [
+      ],
+      "type": "AnnotationNode"
     }
   ],
   "triggers": [
     {
       "config": {
       },
-      "key": "5d278522bb63290008c0f5e3",
+      "key": "5d354b20993cbb0006fb66ab",
       "meta": {
         "category": "trigger",
         "description": "",
         "id": "V~j7MvcjUN",
-        "label": "Webhook",
+        "label": "Validation",
         "name": "webhook",
         "uiId": "yowpM-_eNj",
         "x": 260,
