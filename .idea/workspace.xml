@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89a30b46-66fe-422a-8bfc-8b47f5b4c35b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/solution-workflows/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starter-workflows/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-array-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-array.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-encodingdecoding-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-encodingdecoding-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-math-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-math.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-string-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-string.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-template-helpers-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-template-helpers.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-validation-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-validation.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution-workflows/solution-workflow-workflow-storage-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/solution-workflows/solution-workflow-workflow-storage.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-array-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-array.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-encodingdecoding-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-encodingdecoding-develop.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-math-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-math.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-mutate-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-mutate.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-string-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-string.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-template-helpers-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-template-helpers.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-validation-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-validation.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-workflows/starter-workflow-workflow-storage-develop.flow" beforeDir="false" afterPath="$PROJECT_DIR$/starter-workflows/starter-workflow-workflow-storage.flow" afterDir="false" />
-    </list>
+    <list default="true" id="89a30b46-66fe-422a-8bfc-8b47f5b4c35b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +13,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-153" />
+    <option name="x" value="-448" />
     <option name="y" value="-1055" />
     <option name="width" value="1651" />
     <option name="height" value="972" />
@@ -146,7 +127,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="267" y="23" width="1651" height="972" extended-state="0" />
+    <frame x="-153" y="-1055" width="1651" height="972" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
