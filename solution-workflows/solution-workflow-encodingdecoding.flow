@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-09-10T19:07:25.827Z",
+  "_exportDate": "2019-09-23T18:56:20.859Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -76,7 +76,7 @@
           "q7uVM1Ucqv"
         ],
         [
-          "9kVOhDNBnU"
+          "tnYXc5-Sxw"
         ],
         [
           "1sf1V5nqrT"
@@ -96,8 +96,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 960,
-        "y": 780
+        "x": 940,
+        "y": 1200
       },
       "outputIds": [
       ],
@@ -115,8 +115,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 860,
-        "y": 1080
+        "x": 680,
+        "y": 1040
       },
       "outputIds": [
       ],
@@ -134,8 +134,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 660,
-        "y": 740
+        "x": 560,
+        "y": 600
       },
       "outputIds": [
       ],
@@ -153,8 +153,8 @@
         "id": "CwvDon2R3w",
         "label": "Debug",
         "name": "debug",
-        "x": 460,
-        "y": 740
+        "x": 400,
+        "y": 860
       },
       "outputIds": [
       ],
@@ -221,8 +221,8 @@
         "id": "_0oFMM-7MU",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 460,
-        "y": 660
+        "x": 400,
+        "y": 780
       },
       "outputIds": [
         [
@@ -247,8 +247,8 @@
         "id": "zkUxVxIW8e",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 660,
-        "y": 660
+        "x": 560,
+        "y": 520
       },
       "outputIds": [
         [
@@ -273,8 +273,8 @@
         "id": "gz7Ipy3clw",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 860,
-        "y": 1000
+        "x": 680,
+        "y": 960
       },
       "outputIds": [
         [
@@ -342,8 +342,8 @@
         "id": "s-ElcTpHVo",
         "label": "Function",
         "name": "function",
-        "x": 860,
-        "y": 920
+        "x": 680,
+        "y": 880
       },
       "outputIds": [
         [
@@ -428,76 +428,12 @@
     },
     {
       "config": {
-        "documentPath": "data.body",
-        "resultFormatTemplate": "json",
-        "resultPath": "working.data",
-        "selectorTemplate": ""
-      },
-      "id": "9kVOhDNBnU",
-      "meta": {
-        "category": "logic",
-        "description": "",
-        "id": "CYH92KjZNs",
-        "label": "HTML/XML Parser",
-        "name": "html-parser",
-        "x": 960,
-        "y": 480
-      },
-      "outputIds": [
-        [
-          "iZa2QMy3LU"
-        ]
-      ],
-      "type": "HtmlParserNode"
-    },
-    {
-      "config": {
-        "rules": [
-          {
-            "destination": "working.result.temperature",
-            "type": "set",
-            "valueTemplate": "{{#gt working.data.[0].children.[0].children.[0].children.[0].children.[0].value working.data.[0].children.[0].children.[0].children.[1].children.[0].value}}true{{else}}false{{/gt}}",
-            "valueTemplateType": "json"
-          },
-          {
-            "destination": "working.result.voltage",
-            "type": "set",
-            "valueTemplate": "{{#gt working.data.[0].children.[0].children.[1].children.[0].children.[0].value  working.data.[0].children.[0].children.[1].children.[1].children.[0].value}}true{{else}}false{{/gt}}",
-            "valueTemplateType": "json"
-          },
-          {
-            "destination": "working.result.current",
-            "type": "set",
-            "valueTemplate": "{{#gt working.data.[0].children.[0].children.[2].children.[0].children.[0].value  working.data.[0].children.[0].children.[2].children.[1].children.[0].value}}true{{else}}false{{/gt}}",
-            "valueTemplateType": "json"
-          }
-        ]
-      },
-      "id": "iZa2QMy3LU",
-      "meta": {
-        "category": "logic",
-        "description": "",
-        "id": "BLo0dztu2a",
-        "label": "Mutate",
-        "name": "mutate",
-        "x": 960,
-        "y": 580
-      },
-      "outputIds": [
-        [
-          "d450n-3slJ"
-        ]
-      ],
-      "type": "MutateNode"
-    },
-    {
-      "config": {
-        "bodyTemplate": "{ \"result\": {{jsonEncode working.result}} }",
-        "bodyTemplateType": "string",
+        "bodyTemplate": "working.body",
+        "bodyTemplateType": "path",
         "headerInfo": [
         ],
         "replyIdPath": "",
-        "responseCodeTemplate": ""
+        "responseCodeTemplate": "200"
       },
       "id": "d450n-3slJ",
       "meta": {
@@ -506,8 +442,8 @@
         "id": "E8vPqVuZkK",
         "label": "Webhook Reply",
         "name": "webhook-reply",
-        "x": 960,
-        "y": 680
+        "x": 940,
+        "y": 1100
       },
       "outputIds": [
         [
@@ -545,8 +481,8 @@
         "label": "Note",
         "name": "note",
         "width": 260,
-        "x": 480,
-        "y": 820
+        "x": 300,
+        "y": 940
       },
       "outputIds": [
       ],
@@ -563,12 +499,196 @@
         "label": "Note",
         "name": "note",
         "width": 260,
-        "x": 820,
-        "y": 1160
+        "x": 640,
+        "y": 1120
       },
       "outputIds": [
       ],
       "type": "AnnotationNode"
+    },
+    {
+      "config": {
+        "documentPath": "data.body",
+        "resultFormatTemplate": "text",
+        "resultPath": "working.temperatureValue",
+        "selectorTemplate": "Temperature > Value"
+      },
+      "id": "tnYXc5-Sxw",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "CFNZoGY0NC",
+        "label": "HTML/XML Parser",
+        "name": "html-parser",
+        "x": 940,
+        "y": 480
+      },
+      "outputIds": [
+        [
+          "yaSC9KC6UB"
+        ]
+      ],
+      "type": "HtmlParserNode"
+    },
+    {
+      "config": {
+        "documentPath": "data.body",
+        "resultFormatTemplate": "text",
+        "resultPath": "working.temperatureThreshold",
+        "selectorTemplate": "Temperature > Threshold"
+      },
+      "id": "yaSC9KC6UB",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "CFNZoGY0NC",
+        "label": "HTML/XML Parser",
+        "name": "html-parser",
+        "x": 940,
+        "y": 560
+      },
+      "outputIds": [
+        [
+          "CIQN5YtXkp"
+        ]
+      ],
+      "type": "HtmlParserNode"
+    },
+    {
+      "config": {
+        "documentPath": "data.body",
+        "resultFormatTemplate": "text",
+        "resultPath": "working.voltageValue",
+        "selectorTemplate": "Voltage > Value"
+      },
+      "id": "CIQN5YtXkp",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "CFNZoGY0NC",
+        "label": "HTML/XML Parser",
+        "name": "html-parser",
+        "x": 940,
+        "y": 640
+      },
+      "outputIds": [
+        [
+          "DaZNOQJ0qq"
+        ]
+      ],
+      "type": "HtmlParserNode"
+    },
+    {
+      "config": {
+        "documentPath": "data.body",
+        "resultFormatTemplate": "text",
+        "resultPath": "working.voltageThreshold",
+        "selectorTemplate": "Voltage > Threshold"
+      },
+      "id": "DaZNOQJ0qq",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "CFNZoGY0NC",
+        "label": "HTML/XML Parser",
+        "name": "html-parser",
+        "x": 940,
+        "y": 720
+      },
+      "outputIds": [
+        [
+          "j9Z3zt1hVN"
+        ]
+      ],
+      "type": "HtmlParserNode"
+    },
+    {
+      "config": {
+        "documentPath": "data.body",
+        "resultFormatTemplate": "text",
+        "resultPath": "working.currentValue",
+        "selectorTemplate": "Current > Value"
+      },
+      "id": "j9Z3zt1hVN",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "CFNZoGY0NC",
+        "label": "HTML/XML Parser",
+        "name": "html-parser",
+        "x": 940,
+        "y": 800
+      },
+      "outputIds": [
+        [
+          "I01qieWtcR"
+        ]
+      ],
+      "type": "HtmlParserNode"
+    },
+    {
+      "config": {
+        "documentPath": "data.body",
+        "resultFormatTemplate": "text",
+        "resultPath": "working.currentThreshold",
+        "selectorTemplate": "Current > Threshold"
+      },
+      "id": "I01qieWtcR",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "CFNZoGY0NC",
+        "label": "HTML/XML Parser",
+        "name": "html-parser",
+        "x": 940,
+        "y": 880
+      },
+      "outputIds": [
+        [
+          "puieInZlX9"
+        ]
+      ],
+      "type": "HtmlParserNode"
+    },
+    {
+      "config": {
+        "rules": [
+          {
+            "destination": "working.body.result.temperature",
+            "type": "set",
+            "valueTemplate": "{{#gt (add working.temperatureValue.[0] 0) (add working.temperatureThreshold.[0] 0)}}true{{else}}false{{/gt}}",
+            "valueTemplateType": "json"
+          },
+          {
+            "destination": "working.body.result.voltage",
+            "type": "set",
+            "valueTemplate": "{{#gt (add working.voltageValue.[0] 0) (add working.voltageThreshold.[0] 0)}}true{{else}}false{{/gt}}",
+            "valueTemplateType": "json"
+          },
+          {
+            "destination": "working.body.result.current",
+            "type": "set",
+            "valueTemplate": "{{#gt (add working.currentValue.[0] 0) (add working.currentThreshold.[0] 0)}}true{{else}}false{{/gt}}",
+            "valueTemplateType": "json"
+          }
+        ]
+      },
+      "id": "puieInZlX9",
+      "meta": {
+        "category": "logic",
+        "description": "",
+        "id": "gDHzkpxrms",
+        "label": "Mutate",
+        "name": "mutate",
+        "x": 940,
+        "y": 980
+      },
+      "outputIds": [
+        [
+          "d450n-3slJ"
+        ]
+      ],
+      "type": "MutateNode"
     }
   ],
   "triggers": [
