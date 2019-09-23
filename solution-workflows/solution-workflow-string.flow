@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-09-10T18:49:57.062Z",
+  "_exportDate": "2019-09-23T02:54:59.878Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -431,7 +431,7 @@
     },
     {
       "config": {
-        "bodyTemplate": "{ \"result\" : \"true\" }",
+        "bodyTemplate": "{ \"result\" : true }",
         "bodyTemplateType": "string",
         "headerInfo": [
         ],
@@ -525,7 +525,7 @@
     },
     {
       "config": {
-        "bodyTemplate": "{ \"result\" : \"false\" }",
+        "bodyTemplate": "{ \"result\" : false }",
         "bodyTemplateType": "string",
         "headerInfo": [
         ],
