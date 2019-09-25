@@ -1,5 +1,5 @@
 {
-  "_exportDate": "2019-09-10T18:40:42.627Z",
+  "_exportDate": "2019-09-25T17:55:50.148Z",
   "_type": "flow",
   "applicationId": "5c40ecbac853d20008cd96ba",
   "customNodeVersions": [
@@ -137,7 +137,7 @@
     },
     {
       "config": {
-        "bodyTemplate": "{ \"result\" : \"One or more user fields are missing.\" }",
+        "bodyTemplate": "{ \"error\" : \"One or more user fields are missing.\" }",
         "bodyTemplateType": "string",
         "headerInfo": [
         ],
